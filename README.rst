@@ -2,6 +2,12 @@
 Example FHIR to TranSMART loader
 ################################################################################
 
+|Build status| |codecov|
+
+.. |Build status| image:: https://travis-ci.org/thehyve/python_fhir2transmart.svg?branch=master
+   :target: https://travis-ci.org/thehyve/python_fhir2transmart/branches
+.. |codecov| image:: https://codecov.io/gh/thehyve/python_fhir2transmart/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/thehyve/python_fhir2transmart
 
 Installation
 ------------
@@ -9,6 +15,12 @@ Installation
 The package requires Python 3.6.
 
 To install ``fhir2transmart``, do:
+
+.. code-block:: console
+
+  pip install fhir2transmart
+
+Or from source:
 
 .. code-block:: console
 
