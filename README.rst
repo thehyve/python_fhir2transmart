@@ -24,12 +24,16 @@ an open source data sharing and analytics platform for translational biomedical 
 It also provides a utility that applies the mapper and writes the translated data to tab-separated files
 that can be loaded into a TranSMART database using the transmart-copy_ tool.
 
+The FHIR reader is based on the fhirclient_ package, writing to TranSMART is based on transmart-loader_.
+
 ⚠️ Note: this is a very preliminary version, still under development.
 Issues can be reported at https://github.com/thehyve/python_fhir2transmart/issues.
 
 .. _`HL7 FHIR`: https://hl7.org/fhir
 .. _TranSMART: https://github.com/thehyve/transmart_core
 .. _transmart-copy: https://github.com/thehyve/transmart-core/tree/dev/transmart-copy
+.. _fhirclient: https://pypi.org/project/fhirclient
+.. _transmart-loader: https://pypi.org/project/transmart-loader
 
 
 Installation
