@@ -36,6 +36,9 @@ setup(
     ],
     package_dir={'fhir2transmart':
                  'fhir2transmart'},
+    entry_points={
+        'console_scripts': ['fhir2transmart=fhir2transmart.fhir2transmart:main'],
+    },
     include_package_data=True,
     license="GNU General Public License v3 or later",
     zip_safe=False,

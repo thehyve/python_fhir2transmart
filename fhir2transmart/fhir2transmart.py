@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import json
 import os
 import sys
@@ -37,5 +39,9 @@ def fhir2transmart(input_path, output_dir):
         sys.exit(1)
 
 
-if __name__ == '__main__':
+def main():
     fhir2transmart()
+
+
+if __name__ == '__main__':
+    main()
