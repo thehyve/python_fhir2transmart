@@ -22,7 +22,7 @@ patient_concepts = ['gender', 'birth_date']
 
 study = Study('FHIR', 'FHIR')
 
-trial_visit = TrialVisit(study, '', 0, '')
+trial_visit = TrialVisit(study, '')
 
 
 def map_concept(codeable_concept: CodeableConcept) -> Concept:
