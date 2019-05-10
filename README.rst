@@ -39,18 +39,16 @@ The package requires Python 3.6.
 
 To install ``fhir2transmart``, do:
 
-.. code-block:: console
+.. code-block:: bash
 
   pip install fhir2transmart
 
 Or from source:
 
-.. code-block:: console
+.. code-block:: bash
 
-  git clone https://github.com/thehyve/python_transmart_loader.git
-  cd python_transmart_loader
-  pip install .
-  cd examples/fhir2transmart
+  git clone https://github.com/thehyve/python_fhir2transmart.git
+  cd python_fhir2transmart
   pip install .
 
 
@@ -68,18 +66,18 @@ Read input from a JSON file ``input.json`` and write the output in transmart-cop
 format to ``/path/to/output``. The output directory should be
 empty of not existing (then it will be created).
 
-.. code-block:: console
+.. code-block:: bash
 
   # Translate one json file
-  python -m fhir2transmart.fhir2transmart input.json /path/to/output
+  fhir2transmart input.json /path/to/output
   # Translate all json files in a directory
-  python -m fhir2transmart.fhir2transmart input_dir /path/to/output
+  fhir2transmart input_dir /path/to/output
 
 Example data is available at `MITRE SyntheticMass`_. Instructions:
 
 .. _`MITRE SyntheticMass`: https://syntheticmass.mitre.org/download.html
 
-.. code-block:: console
+.. code-block:: bash
 
   # Download 1K Sample Synthetic Patient Records, FHIR STU3 : 20MB
   wget https://syntheticmass.mitre.org/downloads/2017_11_06/synthea_sample_data_fhir_stu3_nov2017.zip
@@ -88,7 +86,7 @@ Example data is available at `MITRE SyntheticMass`_. Instructions:
   # create an output directory
   mkdir output
   # apply the mapping
-  python -m fhir2transmart.fhir2transmart fhir output
+  fhir2transmart fhir output
 
 This generates the directories ``i2b2metadata`` and ``i2b2demodata`` in the ``output`` directory.
 The generated data can be loaded using transmart-copy_:
