@@ -18,7 +18,7 @@ Example FHIR to TranSMART loader
    :target: https://pypi.org/project/fhir2transmart/
 
 This package contains a mapper that reads data from `HL7 FHIR`_ (STU 3 or R4) resources
-and translates them to the data model or the TranSMART_ platform,
+and translates them to the data model of the TranSMART_ platform,
 an open source data sharing and analytics platform for translational biomedical research.
 
 It also provides a utility that applies the mapper and writes the translated data to tab-separated files
@@ -144,17 +144,6 @@ Encounter_    hospitalization    Visit          locationCd
 License
 -------
 
-Copyright (c) 2019, The Hyve
+Copyright (c) 2019 The Hyve B.V.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+The FHIR to TranSMART loader is licensed under the MIT License. See the file `<LICENSE>`_.

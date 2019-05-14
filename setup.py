@@ -46,7 +46,8 @@ setup(
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
+        'Topic :: Scientific/Engineering :: Bio-Informatics',
+        'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
@@ -55,6 +56,7 @@ setup(
     python_requires='>=3.6.0',
     install_requires=required_packages,
     setup_requires=[
+        'pygments',
         # dependency for `python setup.py test`
         'pytest-runner',
         # dependencies for `python setup.py build_sphinx`
