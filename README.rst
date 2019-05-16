@@ -30,7 +30,7 @@ The FHIR reader is based on the fhirclient_ package, writing to TranSMART is bas
 Issues can be reported at https://github.com/thehyve/python_fhir2transmart/issues.
 
 .. _`HL7 FHIR`: https://hl7.org/fhir
-.. _TranSMART: https://github.com/thehyve/transmart_core
+.. _TranSMART: https://github.com/thehyve/transmart-core
 .. _transmart-copy: https://github.com/thehyve/transmart-core/tree/dev/transmart-copy
 .. _fhirclient: https://pypi.org/project/fhirclient
 .. _transmart-loader: https://pypi.org/project/transmart-loader

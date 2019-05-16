@@ -1,0 +1,84 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:06eb35fc-09e6-48b4-a311-47633f6c4769",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "06eb35fc-09e6-48b4-a311-47633f6c4769",
+        "meta": {
+          "profile": [
+            "http://standardhealthrecord.org/fhir/StructureDefinition/shr-demographics-PersonOfRecord"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test patient 1</div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/thehyve/python_fhir2transmart",
+            "value": "db923473-280d-4257-b7f7-8375c017ab80"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1950-02-20"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd4b7249-54d8-43f7-98fb-4c0a0c551742",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "bd4b7249-54d8-43f7-98fb-4c0a0c551742",
+        "meta": {
+          "profile": [
+            "http://standardhealthrecord.org/fhir/StructureDefinition/shr-encounter-Encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "code": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:06eb35fc-09e6-48b4-a311-47633f6c4769"
+        },
+        "period": {
+          "start": "2010-06-01T14:25:10+02:00",
+          "end": "2010-06-01T15:03:50+02:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5857648f-9667-42d6-9db1-29515aedf390",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5857648f-9667-42d6-9db1-29515aedf390",
+        "meta": {
+          "profile": [
+            "http://standardhealthrecord.org/fhir/StructureDefinition/shr-problem-Problem"
+          ]
+        },
+        "clinicalStatus": "active",
+        "verificationStatus": "confirmed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://dimdi.de/icd10gm2019",
+              "code": "R51",
+              "display": "Kopfschmerz"
+            }
+          ],
+          "text": "Kopfschmerz"
+        },
+        "subject": {
+          "reference": "urn:uuid:06eb35fc-09e6-48b4-a311-47633f6c4769"
+        },
+        "context": {
+          "reference": "urn:uuid:bd4b7249-54d8-43f7-98fb-4c0a0c551742"
+        },
+        "onsetDateTime": "2010-05-21T09:20:00+02:00"
+      }
+    }
+  ]
+}
