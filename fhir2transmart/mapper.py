@@ -13,12 +13,12 @@ from transmart_loader.transmart import DataCollection, Patient, Concept, \
     CategoricalValue, ConceptNode
 
 gender_concept = Concept(
-    'gender', 'Gender', 'gender', ValueType.Categorical)
+    'http://hl7.org/fhir/Patient.gender', 'Gender', 'http://hl7.org/fhir/Patient.gender', ValueType.Categorical)
 
 birth_date_concept = Concept(
-    'birth_date', 'Birth date', 'birth_date', ValueType.Date)
+    'http://hl7.org/fhir/Patient.birth_date', 'Birth date', 'http://hl7.org/fhir/Patient.birth_date', ValueType.Date)
 
-patient_concepts = ['gender', 'birth_date']
+patient_concepts = ['http://hl7.org/fhir/Patient.gender', 'http://hl7.org/fhir/Patient.birth_date']
 
 study = Study('FHIR', 'FHIR')
 
@@ -193,11 +193,12 @@ class Mapper:
         return [patient_root, ontology_root]
 
     @staticmethod
-    def map(collection: Optional[Collection]) -> Optional[DataCollection]:
+    def map(collection: Optional[Collection], with_ontology: bool = True) -> Optional[DataCollection]:
         """ Maps a collection of FHIR Resources to a collection of TranSMART
          entities.
 
         :param collection: the collection of FHIR Resources
+        :param with_ontology: whether to generate ontology codes and ontology tree nodes
         :return: a TranSMART data collection
         """
         if collection is None:
@@ -205,10 +206,10 @@ class Mapper:
         mapper = Mapper()
         mapper.map_collection(collection)
         return DataCollection(
-            mapper.concepts.values(),
+            mapper.concepts.values() if with_ontology else [],
             mapper.studies,
             mapper.trial_visits,
             mapper.visits.values(),
-            mapper.get_ontology(),
+            mapper.get_ontology() if with_ontology else [],
             mapper.patients.values(),
             mapper.observations)

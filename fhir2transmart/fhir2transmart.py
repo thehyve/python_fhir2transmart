@@ -17,7 +17,8 @@ from transmart_loader.loader_exception import LoaderException
 @click.command()
 @click.argument('input_path')
 @click.argument('output_dir')
-def fhir2transmart(input_path, output_dir):
+@click.option('--with-ontology', is_flag=True)
+def fhir2transmart(input_path, output_dir, with_ontology):
     Console.title('FHIR to TranSMART')
     try:
         Console.info('Writing files to {}'.format(output_dir))
@@ -31,7 +32,7 @@ def fhir2transmart(input_path, output_dir):
             with open(filename, 'r') as input_file:
                 data = json.load(input_file)
                 collection = FhirReader.read(data)
-                result = Mapper.map(collection)
+                result = Mapper.map(collection, with_ontology)
                 writer.write_collection(result)
         Console.info('Done.')
     except LoaderException as e:

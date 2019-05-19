@@ -73,9 +73,13 @@ empty of not existing (then it will be created).
 .. code-block:: bash
 
   # Translate one json file
-  fhir2transmart input.json /path/to/output
+  fhir2transmart [--with-ontology] input.json /path/to/output
   # Translate all json files in a directory
-  fhir2transmart input_dir /path/to/output
+  fhir2transmart [--with-ontology] input_dir /path/to/output
+
+With the ``--with-ontology`` option, concepts and ontology nodes
+are created based on the input data. Do not use this option when ontologies
+have already been loaded separately.
 
 Example data is available at `MITRE SyntheticMass`_. Instructions:
 
