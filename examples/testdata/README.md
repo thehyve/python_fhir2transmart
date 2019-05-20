@@ -39,8 +39,8 @@ cd icd10gm2019sys-claml
 unzip ../icd10gm2019syst-claml.zip
 # Create an output directory
 mkdir -p output/icd10gm2019
-# Apply the mapping
-claml2transmart http://dimdi.de/icd10gm2019 Klassifikationsdateien/icd10gm2019syst_claml_20180921.xml output/icd10gm2019
+# Apply the mapping, use codes in concept names
+claml2transmart http://dimdi.de/icd10gm2019 Klassifikationsdateien/icd10gm2019syst_claml_20180921.xml output/icd10gm2019 --code-prefix
 # Upload the data
 PGUSER=tm_cz PGPASSWORD=tm_cz java -jar transmart-copy.jar -d output/icd10gm2019
 ```
