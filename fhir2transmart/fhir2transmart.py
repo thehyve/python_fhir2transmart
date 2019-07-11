@@ -24,7 +24,8 @@ def fhir2transmart(input_path, output_dir, with_ontology):
         Console.info('Writing files to {}'.format(output_dir))
         writer = TransmartCopyWriter(output_dir)
         if path.isdir(input_path):
-            filenames = [path.join(input_path, filename) for filename in os.listdir(input_path) if filename.endswith('.json')]
+            filenames = [path.join(input_path, filename)
+                         for filename in os.listdir(input_path) if filename.endswith('.json')]
         else:
             filenames = [input_path]
         for filename in filenames:

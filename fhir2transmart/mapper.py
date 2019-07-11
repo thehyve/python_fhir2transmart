@@ -136,7 +136,8 @@ class Mapper:
             encounter.period.end.date if encounter.period else None,
             encounter.class_fhir.code if encounter.class_fhir else None,
             encounter.hospitalization,
-            None
+            None,
+            []
         )
         self.visits[encounter.id] = visit
 
@@ -207,6 +208,8 @@ class Mapper:
         mapper.map_collection(collection)
         return DataCollection(
             mapper.concepts.values() if with_ontology else [],
+            [],
+            [],
             mapper.studies,
             mapper.trial_visits,
             mapper.visits.values(),
