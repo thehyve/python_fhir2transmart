@@ -194,7 +194,7 @@ class Mapper:
         return [patient_root, ontology_root]
 
     @staticmethod
-    def map(collection: Optional[Collection], with_ontology: bool = True) -> Optional[DataCollection]:
+    def map(collection: Optional[Collection], with_ontology: bool = False) -> Optional[DataCollection]:
         """ Maps a collection of FHIR Resources to a collection of TranSMART
          entities.
 

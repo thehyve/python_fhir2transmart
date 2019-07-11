@@ -17,7 +17,9 @@ from transmart_loader.loader_exception import LoaderException
 @click.command()
 @click.argument('input_path')
 @click.argument('output_dir')
-@click.option('--with-ontology', is_flag=True)
+@click.option('--with-ontology', is_flag=True, show_default=True,
+              help='Whether to generate ontology codes and ontology tree nodes')
+@click.version_option()
 def fhir2transmart(input_path, output_dir, with_ontology):
     Console.title('FHIR to TranSMART')
     try:
