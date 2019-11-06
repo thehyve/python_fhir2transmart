@@ -145,6 +145,13 @@ Encounter_    hospitalization    Visit          locationCd
 .. _Encounter: https://www.hl7.org/fhir/encounter.html
 
 
+Acknowledgement
+---------------
+
+This project was funded by the German Ministry of Education and Research (BMBF) as part of the project
+DIFUTURE - Data Integration for Future Medicine within the German Medical Informatics Initiative (grant no. 01ZZ1804D).
+
+
 License
 -------
 
